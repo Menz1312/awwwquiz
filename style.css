@@ -110,14 +110,14 @@ body {
     from { opacity: 0; }
     to { opacity: 1; }
 }
-
-@media (max-width: 600px) {
+@media (max-width: 480px) {
     .quiz-container {
         padding: 1rem;
         width: 95%;
     }
     
-    #question-text {
-        font-size: 1.2rem;
+    .answer-option {
+        padding: 0.8rem;
+        width: calc(100% - 1.6rem);
     }
 }
