@@ -481,7 +481,7 @@ const quizData = {
     {
       "question": "regex: ^([^0-9]{2}-[0\\-9]{3})$ pasuje do:",
       "answers": [
-        {"text": "aa-000", "correct": false},
+        {"text": "aa-000", "correct": true},
         {"text": "aa-001", "correct": false},
         {"text": "^0-00-", "correct": false},
         {"text": "aa-00-", "correct": true},
