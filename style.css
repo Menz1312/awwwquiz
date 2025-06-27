@@ -1,0 +1,123 @@
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #34495e;
+    --correct-color: #27ae60;
+    --incorrect-color: #e74c3c;
+    --missing-color: #f39c12;
+    --text-color: #ecf0f1;
+    --bg-color: #1a1a1a;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.quiz-container {
+    background-color: var(--primary-color);
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    padding: 2rem;
+    width: 90%;
+    max-width: 800px;
+    text-align: center;
+}
+
+#quiz-progress {
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    color: #bdc3c7;
+}
+
+#question-container {
+    margin-bottom: 2rem;
+}
+
+#question-text {
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+    min-height: 4rem;
+}
+
+.answer-option {
+    background-color: var(--secondary-color);
+    border: none;
+    border-radius: 5px;
+    color: var(--text-color);
+    cursor: pointer;
+    margin: 0.5rem 0;
+    padding: 1rem;
+    text-align: left;
+    width: 95%;
+    transition: background-color 0.3s;
+}
+
+.answer-option:hover {
+    background-color: #3d566e;
+}
+
+.answer-option input {
+    margin-right: 10px;
+}
+
+.correct {
+    background-color: var(--correct-color);
+}
+
+.incorrect {
+    background-color: var(--incorrect-color);
+}
+
+.missing {
+    background-color: var(--missing-color);
+}
+
+.btn {
+    background-color: #3498db;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    font-size: 1rem;
+    padding: 0.8rem 1.5rem;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #2980b9;
+}
+
+#result-container {
+    margin-top: 2rem;
+}
+
+.hidden {
+    display: none;
+}
+
+.fade-in {
+    animation: fadeIn 0.5s;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@media (max-width: 600px) {
+    .quiz-container {
+        padding: 1rem;
+        width: 95%;
+    }
+    
+    #question-text {
+        font-size: 1.2rem;
+    }
+}
