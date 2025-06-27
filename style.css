@@ -1,6 +1,7 @@
 :root {
     --primary-color: #2c3e50;
     --secondary-color: #34495e;
+    --selected-color: #3498db;
     --correct-color: #27ae60;
     --incorrect-color: #e74c3c;
     --missing-color: #f39c12;
@@ -52,30 +53,31 @@ body {
     border-radius: 5px;
     color: var(--text-color);
     cursor: pointer;
-    margin: 0.5rem 0;
+    margin: 0.5rem auto;
     padding: 1rem;
     text-align: left;
     width: 95%;
     transition: background-color 0.3s;
+    display: block;
 }
 
 .answer-option:hover {
     background-color: #3d566e;
 }
 
-.answer-option input {
-    margin-right: 10px;
+.answer-option.selected {
+    background-color: var(--selected-color);
 }
 
-.correct {
+.answer-option.correct {
     background-color: var(--correct-color);
 }
 
-.incorrect {
+.answer-option.incorrect {
     background-color: var(--incorrect-color);
 }
 
-.missing {
+.answer-option.missing {
     background-color: var(--missing-color);
 }
 
@@ -110,6 +112,7 @@ body {
     from { opacity: 0; }
     to { opacity: 1; }
 }
+
 @media (max-width: 480px) {
     .quiz-container {
         padding: 1rem;
